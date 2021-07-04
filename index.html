@@ -16,39 +16,62 @@
 		<link rel="stylesheet" href="styles.css">
 	</head>
 	<body>
-		<header class="container">
-			<nav class="container">
+		<header>
+			<nav>
 				<a href="/" id="logo"><img src="assets/logo-blue-160x160-1.png"></a>
-				<a href="/" class="button">Schedule a demo</a>
+				<a href="/" id="schedule" class="button">Schedule a demo</a>
 			</nav>
 			<section>
 				<h1><em>B2B</em> Marketing Services</h1>
 				<h2>We turn your marketing plans into action by building on your ideas and executing initiatives alongside you and your team.</h2>
 			</section>
 		</header>
-		<article>
+		<article id="tools">
 			<section>
 				<h3>We’re experts with modern marketing tools, so you don’t have to be!</h3>
 				<p>With hands-on experience in B2B’s most innovative apps and tools, we take a data-driven approach to continually improve prospect engagement. Whether we work directly out of your platform or provide our insights manually, you always get full visibility into the process.</p>
 			</section>
-			<img src="/assets/Marketing_Tools.svg" alt="" class="featured">
+			<section><img src="/assets/Marketing_Tools.svg" alt="Marketing Tools"></section>
 		</article>
-		<article>
+		<article id="team">
+			<section><img src="/assets/Complete-Department-Marketing.png" alt="Marketing Department"></section>
 			<section>
 				<h3>The best way to build a marketing team</h3>
-				<p>With EBQ, you’re not just hiring a marketing specialist. You’re getting an entire marketing department at a fraction of the cost and effort of hiring internally. For each project, we provide: a Success Manager to drive high-level strategy, a Project Manager to oversee day-to-day operations, and one or more Specialists working diligently to amplify your brand.</p>
+				<p>With EBQ, you’re not just hiring a marketing specialist. You’re getting an entire marketing department at a fraction of the cost and effort of hiring internally.</p> 
+				<p>For each project, we provide: a Success Manager to drive high-level strategy, a Project Manager to oversee day-to-day operations, and one or more Specialists working diligently to amplify your brand.</p>
 			</section>
-			<img src="/assets/Complete-Department-Marketing.png" alt="" class="featured">
 		</article>
 		<footer>
 			<section>
 				<h4>Looking to take your marketing to the next level?</h4>
-				<a href="/" class="button">Contact us</a>
+				<a href="/" id="contact" class="button">Contact us</a>
 			</section>
 		</footer>
 		<!--Page Content-->
 		<script type="text/javascript">
-			// Event listener JS goes here
+			//Schedule Button
+			var schedule = document.getElementById("schedule");
+			schedule.addEventListener("click", calendarForm);
+			function calendarForm() {
+				var today = new Date();
+				var dd = today.getDate();
+				var mm = today.getMonth()+1; 
+				var yyyy = today.getFullYear();
+				if(dd<10) {
+					dd='0'+dd;
+				} 
+				if(mm<10) {
+					mm='0'+mm;
+				} 
+				today = mm+'-'+dd+'-'+yyyy;
+				alert("You scheduled and appointment on " + today + "!");
+			}
+			//Contact Button
+			var contact = document.getElementById("contact"); 
+			contact.addEventListener("click", emailForm);
+			function emailForm() {
+				window.open('mailto:tom.brinker@brinkerwebdesign.com?subject=EBQ');
+			}
 		</script>
 	</body>
 </html>
