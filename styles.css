@@ -1,1 +1,72 @@
 /******* LANDING PAGE STYLES *******/
+/******
+RESET
+******/
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+/******
+WEB FONTS
+******/
+/*Open Sans*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+/******
+Typography
+******/
+html{
+    font-family: 'Open Sans', sans-serif;
+}
+/******
+GRID
+******/
+
+/******
+CONTENT
+******/
+h1{
+    font-weight: 600;
+    font-size: 100px;
+}
+h2{
+    font-size: 40px;
+    font-weight: 400;
+}
+h3{
+    font-size: 40px;
+    font-weight: 600;
+}
+h4{font-size: 50px;}
+em{
+    display:block;
+    font-style: normal;
+    font-weight: 400 ;
+}
+p{
+    font-size: 28px;
+}
+a{
+    text-decoration: none;;
+}
+.button{
+    display: inline-block;
+    font-size: 25px;;
+    font-weight: 600;
+    color:#fff;
+    background: #2979EC;
+    text-transform: uppercase;
+    padding: 15px 30px;
+    border-radius: 36px;
+}
+
+/******
+LAYOUT
+******/
+header{
+    background-color: #EBF4FF;
+}
+footer{
+    background-color: #0A459E;
+    color: #fff;
+}
